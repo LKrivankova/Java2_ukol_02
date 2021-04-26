@@ -42,7 +42,7 @@ public class MainController {
         int randomNumberForPics = rndGenerator.nextInt(3) + 1;
         ModelAndView newView = new ModelAndView("quote");
         newView.addObject("randomQuote", quotes.get(rndGenerator.nextInt(quotes.size())));
-        newView.addObject("randomBackgroundPic", String.format("background-image: url(/images/backgroundPic-%d.jpg)", randomNumberForPics));
+        newView.addObject("randomBackgroundPic", String.format("/images/backgroundPic-%d.jpg", randomNumberForPics));
         System.out.println("randomNumberForPics: " + randomNumberForPics);
         return newView;
     }
